@@ -1,2 +1,15 @@
 # killAll
-基于MySQL、Spring Cloud、Redis、RabbitMQ、Kubernetes、Nginx秒杀系统
+基于MySQL、Spring Cloud、Redis、RabbitMQ、Kubernetes、Nginx秒杀系统，这是定的技术架构，存在部分技术并不熟悉以及还未学习，边学边做争取1-2月做完。
+MySQL：作为主要的关系型数据库，用于存储秒杀系统的核心数据，如商品信息、用户信息、订单信息等。可以根据需求进行数据表设计和索引优化，确保数据库的读写性能和并发访问能力。
+
+Spring Cloud：Spring Cloud是一套基于Spring Boot的分布式系统开发工具，提供了众多的组件和框架来构建分布式应用。在秒杀系统中，可以使用Spring Cloud提供的服务注册与发现（如Eureka）、服务调用（如Feign）、熔断器（如Hystrix）等组件来实现系统的高可用、负载均衡和故障容错等功能。
+
+Redis：Redis是一种内存数据库，常用于缓存、队列等场景。在秒杀系统中，可以使用Redis作为缓存存储秒杀商品的库存信息，以减轻数据库的访问压力，并提高系统的响应速度。同时，也可以使用Redis作为分布式锁的实现，实现并发控制。
+
+RabbitMQ：RabbitMQ是一种消息队列，可以实现异步消息的传递和处理。在秒杀系统中，可以使用RabbitMQ来处理订单的异步处理、支付通知等任务，减轻系统的压力，并提高系统的并发能力。
+
+Kubernetes：Kubernetes是一个开源的容器编排平台，用于自动化部署、扩展和管理容器化应用。在秒杀系统中，可以使用Kubernetes来部署和管理系统的微服务，实现容器的动态调度、高可用性和水平扩展等。
+
+Nginx：Nginx是一种高性能的Web服务器和反向代理服务器，可以用于负载均衡、反向代理、静态资源缓存等。在秒杀系统中，可以使用Nginx作为反向代理，实现请求的负载均衡和高并发处理。
+
+Spring Security：Spring Security是一种强大的身份认证和访问控制框架，用于保护应用程序的安全性。在秒杀系统中，可以使用Spring Security来进行用户身份验证和权限控制，确保系统的安全性。
